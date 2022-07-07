@@ -1,0 +1,675 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+
+.header {
+  background-image: url('../images/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 37px 0 70px;
+  &__nav {
+    max-width: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-btn {
+    display: none;
+    width: 26px;
+    height: 18px;
+    background-image: url('../images/menu-burger__btn.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border: none;
+    background-color: transparent;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 76px;
+
+  &__logo {
+    display: flex;
+    z-index: 1;
+  }
+
+  &__contact {
+    &-item {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    & span {
+      display: block;
+      color: #fff;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    & .contact-item__phone {
+      display: block;
+      color: #fff;
+      @extend %Monserrat-700;
+      font-size: 17px;
+      line-height: 21px;
+    }
+  }
+}
+
+.menu-list {
+  display: flex;
+
+  &__item+.menu-list__item {
+    margin-left: 40px;
+  }
+
+  &__item .menu-list__link {
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+.header__title {
+  @extend %Monserrat-900;
+  max-width: 568px;
+  font-size: 50px;
+  line-height: 55px;
+  color: $h1;
+  margin-bottom: 57px;
+}
+
+.header__subtitle {
+  @extend %Monserrat-900;
+  color: $h1;
+  font-size: 18px;
+  line-height: 19px;
+
+  &-text {
+    width: 227px;
+    @extend %Monserrat-700;
+    color: #fff;
+    font-size: 24px;
+    line-height: 33.6px;
+
+    & span {
+      font-size: 36px;
+      line-height: 50.4px;
+    }
+
+    margin-bottom: 28px;
+  }
+}
+
+.header__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-link {
+    @extend %link-btn;
+    margin-right: 10px;
+  }
+
+  &-text {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    color: #fff;
+    max-width: 433px;
+    width: 100%;
+  }
+}
+
+.link-btn__arrow::after {
+  content: '';
+  position: absolute;
+  background-image: url('../images/arrow.svg');
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 15px;
+  right: 22px;
+  top: 14px;
+}
+
+.about {
+  padding: 90px 0 30px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @extend %title-section;
+    margin-right: 10px;
+    min-width: 200px;
+  }
+
+  &__text {
+    max-width: 736px;
+  }
+}
+
+.service {
+  padding: 30px 0 40px;
+
+  &__title {
+    @extend %title-section;
+    margin-bottom: 60px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 310px 310px 290px;
+    grid-template-rows: 76px 76px;
+    justify-items: start;
+    justify-content: center;
+    align-items: center;
+    row-gap: 63px;
+    column-gap: 90px;
+    margin-bottom: 70px;
+  }
+
+  &__inner-title {
+    @extend %Monserrat-700;
+    color: $title;
+    padding-left: 102px;
+    position: relative;
+  }
+
+  &-icon::before {
+    content: '';
+    position: absolute;
+    width: 76px;
+    height: 70px;
+    left: 0;
+    top: -9px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-icon__1::before {
+    background-image: url('../images/service/1.svg');
+  }
+
+  &-icon__2::before {
+    background-image: url('../images/service/2.svg');
+  }
+
+  &-icon__3::before {
+    background-image: url('../images/service/3.svg');
+  }
+
+  &-icon__4::before {
+    background-image: url('../images/service/4.svg');
+  }
+
+  &-icon__5::before {
+    background-image: url('../images/service/5.svg');
+  }
+
+  &-icon__6::before {
+    background-image: url('../images/service/6.svg');
+  }
+
+  &__description-title {
+    @extend %Monserrat-700;
+    color: $title;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 31px;
+  }
+
+  &__description-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 42px;
+  }
+
+  &__description-item {
+    max-width: 516px;
+    width: 100%;
+
+    &+.service__description-item {
+      margin-left: 32px;
+    }
+  }
+
+  &__link {
+    @extend %link-btn;
+    max-width: 253px;
+    width: 100%;
+    margin-bottom: 45px;
+  }
+}
+
+.objective {
+  padding: 100px 0 40px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 111px;
+
+    &-inner {
+      @extend %title-section;
+      padding-left: 290px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 164px;
+        height: 197px;
+        background-image: url('../images/objective-title-bg.svg');
+        left: 113px;
+        top: -55px;
+      }
+    }
+
+    &-text {
+      @extend %Monserrat-700;
+      font-size: 24px;
+      line-height: 31px;
+      max-width: 470px;
+    }
+  }
+
+  &__steps {
+    margin-bottom: 115px;
+  }
+  &__steps-title {
+    @extend %Monserrat-700;
+    color: $title;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 104px;
+  }
+
+  &__steps-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  &__step {
+    max-width: 298px;
+    @extend %Monserrat-700;
+    color: $title;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 57px;
+      height: 115px;
+      top: -64px;
+      z-index: -1;
+    }
+
+    &-one::before {
+      background-image: url('../images/number/1.svg');
+      left: 0;
+    }
+
+    &-too::before {
+      background-image: url('../images/number/2.svg');
+      width: 91px;
+      left: -35px;
+    }
+
+    &-three::before {
+      background-image: url('../images/number/3.svg');
+      width: 91px;
+      left: -64px;
+    }
+  }
+  &__step-one {
+    padding-left: 28px;
+  }
+}
+.price {
+  margin-bottom: 97px;
+  &__title {
+    @extend %title-section;
+  }
+  &__description {
+    display: flex;
+    margin-bottom: -55px;
+  }
+  &__description-text {
+    max-width: 529px;
+    padding-top: 33px;
+  }
+  &__download {
+    display: inline-block;
+    padding: 17px 54px 17px 22px;
+    @extend %Monserrat-700;
+    color: $title;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05em;
+    border: 2px solid $title;
+    position: relative;
+    & + .price__download {
+      margin-left: 24px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 23px;
+      height: 24px;
+      background-image: url('../images/download-icon.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      right: 15px;
+    }
+    &:hover {
+      background-color: #f2f2f2;
+    }
+  }
+  &__tariff {
+    display: flex;
+    margin-left: 30px;
+    &-description{
+      padding: 38px 19px 40px;
+      border: 2px solid $title;
+      width: 259px;
+      height: 321px;
+      text-align: center;
+      color: $title;
+      &__item {
+        margin-bottom: 16px;
+      }
+      &__name {
+        @extend %Monserrat-700;
+        font-size: 26px;
+        line-height: 36.4px;
+        margin-bottom: 6px;
+      }
+      &__price {
+        @extend %Monserrat-700;
+        font-size: 70px;
+        line-height: 80.5px;
+        margin-bottom: 3px;
+      }
+      &__period {
+        font: 20px;
+        line-height: 24.38px;
+        margin-bottom: 28px;
+      }
+    }
+    &-description + .price__tariff-description {
+      margin-left: 12px;
+    }
+  }
+}
+p.description-text__item + p.description-text__item {
+  margin: 30px 0;
+}
+.description-text__item span{
+  @extend %Monserrat-700;
+}
+
+.clients {
+  &__title {
+    @extend %title-section;
+    margin-bottom: 38px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+  &__item-link {
+    display: block;
+  }
+  &__descroption-title {
+    @extend %Monserrat-700;
+    color: $forFooter;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 27px;
+  }
+  &__descroption-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+    &__items {
+      max-width: 530px;
+      width: 100%;
+      font-size: 13px;
+      line-height: 15.6px;
+      color: $forFooter;
+    }
+    &__items + .clients__descroption-text__items {
+      margin-left: 30px;
+    }
+    &__item + .clients__descroption-text__item {
+      margin-top: 12px;
+    }
+    &__item + .clients__descroption-list {
+      margin-top: 6px;
+    }
+  }
+  &__descroption-list__item + .clients__descroption-list__item {
+    margin-top: 4px;
+  }
+}
+.footer {
+  &__bg-images {
+    background-image: url('../images/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__request {
+    padding: 60px 0 40px;
+    display: flex;
+    justify-content: center;
+  }
+  &__request-title {
+    max-width: 374px;
+    @extend %Monserrat-700;
+    color: #fff;
+    font-size: 36px;
+    line-height: 43px;
+    padding-right: 30px;
+    padding-top: 42px;
+    & + .footer-form {
+      margin-left: 40px;
+    }
+  }
+  &-form {
+    max-width: 343px;
+    border: none;
+    &__phone,
+    &__name,
+    &__email {
+      background-color: #ececec;
+      width: 100%;
+      padding: 4px 14px;
+      margin-bottom: 17px;
+      &::placeholder{
+        color: $title;
+      }
+    }
+    &__message {
+      width: 100%;
+      height: 70px;
+      padding: 4px 14px;
+      resize: none;
+      margin-bottom: 14px;
+      background-color: #ececec;
+      &::placeholder {
+        color: $title;
+      }
+    }
+    &__lable {
+      width: 100%;
+    }
+    &__input {
+      width: 1px;
+      height: 1px;
+      position: absolute;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+      &:checked + .footer-form__checkbox {
+        background-image: url('../images/checkbox-active.svg');
+        background-repeat: no-repeat;
+        background-size: 8px;
+        background-position: 6px;
+        
+      }
+    }
+    &__checkbox {
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      background-color: #ececec;
+    }
+    &__checkbox-text {
+      margin-left: 28px;
+      font-size: 10px;
+      line-height: 18px;
+      color: $forFooter;
+      vertical-align: text-top;
+    }
+    &__btn {
+      cursor: pointer;
+      margin-top: 6px;
+      width: 100%;
+      height: 50px;
+      text-align: left;
+      padding-left: 90px;
+      @extend %Monserrat-700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $link;
+      background-color: $h1;
+      position: relative;
+      &::after {
+        content: '';
+        background-image: url('../images/arrow.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        width: 19px;
+        height: 15px;
+        left: 220px;
+      }
+    }
+  }
+  &__bg-color {
+    background-color: #06182F;
+    color: #fff;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 0;
+    &__email {
+      margin-bottom: 16px;
+    }
+    &__phone {
+      display: block;
+      color: #fff;
+      & span {
+        margin-left: 14px;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__text {
+      width: 185px;
+      text-align: right;
+    }
+    &__text-title {
+      line-height: 22px;
+      color: $h1;
+      margin-bottom: 19px;
+    }
+    &__text-copyright {
+      font-size: 9px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.modal-window {
+  display: none;
+  position: fixed;
+  bottom: 25.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  background-color: #e5e5e5;
+  max-width: 376px;
+  width: 100%;
+  height: 383px;
+  padding: 40px 30px;
+  &__btn {
+    display: block;
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 151px;
+  }
+  &__text {
+    width: 220px;
+    margin: 0 auto;
+    @extend %Monserrat-400;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: #444;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url('../images/modal-window-bg.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 94px;
+      height: 58px;
+      top: -81px;
+      left: 50%;
+      transform: translateX(-45%);  
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  z-index: 5;
+  position: absolute;
+  // top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+@import 'media';

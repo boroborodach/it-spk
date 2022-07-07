@@ -1,0 +1,42 @@
+$h1: #00feff;
+$link: #002047;
+$title: #001e42;
+$forFooter: #A5AAAF;
+
+%Monserrat-400 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%Monserrat-700 {
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-weight: 700;
+}
+
+%Monserrat-900 {
+  font-family: 'Montserrat-Black', sans-serif;
+  font-weight: 900;
+}
+
+%link-btn {
+  display: block;
+  color: $link;
+  @extend %Monserrat-700;
+  padding: 15px 53px 15px 22px;
+  max-width: 253px;
+  width: 100%;
+  height: 47px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: $h1;
+  position: relative;
+}
+
+%title-section {
+  @extend %Monserrat-700;
+  font-size: 50px;
+  line-height: 60.95px;
+  color: $title;
+}
